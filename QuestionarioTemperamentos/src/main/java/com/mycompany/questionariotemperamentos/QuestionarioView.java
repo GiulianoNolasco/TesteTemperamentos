@@ -4,7 +4,8 @@
  */
 package com.mycompany.questionariotemperamentos;
 
-import javax.swing.JLabel;
+import java.awt.Desktop;
+import java.net.URI;
 import javax.swing.JOptionPane;
 
 /**
@@ -70,30 +71,22 @@ public class QuestionarioView extends javax.swing.JFrame {
         lbl2 = new javax.swing.JLabel();
         lbl3 = new javax.swing.JLabel();
         lbl4 = new javax.swing.JLabel();
+        btnReiniciar1 = new javax.swing.JButton();
 
         jRadioButton1.setText("jRadioButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Teste de Temperamentos");
         setMinimumSize(new java.awt.Dimension(640, 700));
-        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Source Code Pro", 0, 36)); // NOI18N
         jLabel1.setText("Teste de Temperamentos");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(50, 10, 510, 46);
 
         jLabel2.setText("Escolha na lista as palavras que melhor o descrevem. ");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(62, 58, 390, 16);
 
         jLabel3.setText("Lendo as colunas horizontalmente, circule apenas uma palavra de cada linha.");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(60, 90, 480, 20);
 
         jLabel4.setText("Quando finalizar a lista, clique em \"Obter Resultado\".");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(60, 120, 490, 16);
 
         btnEnviarTeste.setFont(new java.awt.Font("Source Code Pro Semibold", 0, 36)); // NOI18N
         btnEnviarTeste.setText("Obter Resultado");
@@ -102,50 +95,42 @@ public class QuestionarioView extends javax.swing.JFrame {
                 btnEnviarTesteActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEnviarTeste);
-        btnEnviarTeste.setBounds(50, 540, 510, 40);
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(146, 140, 0, 0);
 
         btnresposta1.setFont(new java.awt.Font("Source Code Pro", 0, 24)); // NOI18N
         btnresposta1.setText("1");
+        btnresposta1.setFocusPainted(false);
         btnresposta1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnresposta1ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnresposta1);
-        btnresposta1.setBounds(50, 449, 125, 37);
 
         btnresposta2.setFont(new java.awt.Font("Source Code Pro", 0, 24)); // NOI18N
         btnresposta2.setText("2");
+        btnresposta2.setFocusPainted(false);
         btnresposta2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnresposta2ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnresposta2);
-        btnresposta2.setBounds(181, 449, 123, 37);
 
         btnresposta3.setFont(new java.awt.Font("Source Code Pro", 0, 24)); // NOI18N
         btnresposta3.setText("3");
+        btnresposta3.setFocusPainted(false);
         btnresposta3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnresposta3ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnresposta3);
-        btnresposta3.setBounds(310, 449, 113, 37);
 
         btnresposta4.setFont(new java.awt.Font("Source Code Pro", 0, 24)); // NOI18N
         btnresposta4.setText("4");
+        btnresposta4.setFocusPainted(false);
         btnresposta4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnresposta4ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnresposta4);
-        btnresposta4.setBounds(429, 449, 138, 37);
 
         btnReiniciar.setFont(new java.awt.Font("Source Code Pro Semibold", 0, 24)); // NOI18N
         btnReiniciar.setText("Reiniciar");
@@ -154,8 +139,6 @@ public class QuestionarioView extends javax.swing.JFrame {
                 btnReiniciarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnReiniciar);
-        btnReiniciar.setBounds(10, 608, 230, 30);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -209,24 +192,112 @@ public class QuestionarioView extends javax.swing.JFrame {
         });
         jScrollPane5.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane5);
-        jScrollPane5.setBounds(50, 158, 517, 279);
-
         lbl1.setText("Contador 1:  0");
-        getContentPane().add(lbl1);
-        lbl1.setBounds(60, 490, 100, 16);
 
         lbl2.setText("Contador 2 : 0 ");
-        getContentPane().add(lbl2);
-        lbl2.setBounds(200, 490, 90, 16);
 
         lbl3.setText("Contador 3 : 0");
-        getContentPane().add(lbl3);
-        lbl3.setBounds(330, 490, 90, 16);
 
         lbl4.setText("Contador 4 :  0");
-        getContentPane().add(lbl4);
-        lbl4.setBounds(450, 490, 110, 20);
+
+        btnReiniciar1.setFont(new java.awt.Font("Source Code Pro Semibold", 0, 14)); // NOI18N
+        btnReiniciar1.setText("Clique aqui e saiba mais sobre os temperamentos.");
+        btnReiniciar1.setFocusPainted(false);
+        btnReiniciar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReiniciar1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(btnresposta1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(5, 5, 5)
+                        .addComponent(btnresposta2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(7, 7, 7)
+                        .addComponent(btnresposta3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(7, 7, 7)
+                        .addComponent(btnresposta4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
+                        .addComponent(lbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
+                        .addComponent(lbl3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(lbl4, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(btnEnviarTeste, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(btnReiniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(96, 96, 96)
+                                    .addComponent(jLabel5))
+                                .addComponent(btnReiniciar1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(61, 61, 61))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jLabel1)
+                .addGap(4, 4, 4)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jLabel4)
+                .addGap(14, 14, 14)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel5))
+                    .addComponent(btnReiniciar1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnresposta1)
+                    .addComponent(btnresposta2)
+                    .addComponent(btnresposta3)
+                    .addComponent(btnresposta4))
+                .addGap(3, 3, 3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl1)
+                    .addComponent(lbl2)
+                    .addComponent(lbl3)
+                    .addComponent(lbl4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnEnviarTeste, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnReiniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -271,15 +342,37 @@ public class QuestionarioView extends javax.swing.JFrame {
             respostaMaior = resposta4;
             temperamento = 4;
         }
+        
+        String resultado1 = "Resultado: O seu temperamento é o Sanguíneo.\n"
+                + "\nA pessoa que tem o temperamento sanguíneo é caracterizada por ser mais extrovertida e otimista.\n"
+                + "\n"
+                + "São pessoas alegres, esperançosas, calorosas, amáveis e simpáticas. De modo geral são explosivas, instáveis emocionalmente, impulsivas e até egoístas.\n"
+                + "\n"
+                + "Sabe aquele seu amigo que tem uma certa dificuldade de ficar quieto? Que está sempre fazendo uma piada ou que te interrompe sempre que você está falando? Então, essas são características de um sanguíneo ";
+        
+        String resultado2 = "Resultado: O seu temperamento é o Colérico.\n"
+                + "\nPessoas com temperamento colérico são mais explosivas e agressivas do que as demais.\n"
+                + "\n"
+                + "São pessoas dominadoras, ambiciosas, determinadas, impulsivas, comandam e lideram e são bons planejadores. Em algumas situações são intolerantes, egocêntricos e impacientes. ";
+        
+        String resultado3 = "Resultado: O seu temperamento é o Melancólico.\n"
+                + "\nO temperamento mais profundo é o melancólico. Os melancólicos são sensíveis em suas emoções, são pessoas detalhistas, que gostam de ficar mais quietinhas.\n"
+                + "\n"
+                + "Possuem dificuldade de expor as suas emoções e sentimentos, são fiéis e desconfiados. São pessoas leais, sensíveis e dedicadas. ";
+       
+        String resultado4 = "Resultado: O seu temperamento é o Fleumático.\n"
+                + "\nSabe aquela pessoa que faz de tudo para evitar um conflito? Então, essa é uma das características de um fleumático.\n"
+                + "\n"
+                + "São pessoas dóceis, pacíficas, sonhadoras, positivas e disciplinadas. Geralmente essas pessoas são confiáveis e equilibradas. ";
 
         if (temperamento == 1) {
-            JOptionPane.showMessageDialog(this, temperamento + " Temperamento Sanguíneo! " + respostaMaior, "Resultado", 1);
+            JOptionPane.showMessageDialog(this, resultado1, "Resultado", 1);
         } else if (temperamento == 2) {
-            JOptionPane.showMessageDialog(this, temperamento + " Temperamento Colético! " + respostaMaior, "Resultado", 1);
+            JOptionPane.showMessageDialog(this, resultado2, "Resultado", 1);
         } else if (temperamento == 3) {
-            JOptionPane.showMessageDialog(this, temperamento + " Temperamento Melancólico! " + respostaMaior, "Resultado", 1);
+            JOptionPane.showMessageDialog(this, resultado3, "Resultado", 1);
         } else if (temperamento == 4) {
-            JOptionPane.showMessageDialog(this, temperamento + " Temperamento Fleumático! " + respostaMaior, "Resultado", 1);
+            JOptionPane.showMessageDialog(this, resultado4, "Resultado", 1);
         } else if (temperamento == 0) {
             JOptionPane.showMessageDialog(this, "Total de respostas = " + temperamento + " - " + respostaMaior + " Sem resultado.", "Resultado", 1);
         }
@@ -294,9 +387,18 @@ public class QuestionarioView extends javax.swing.JFrame {
         temperamento = 0;
         lbl1.setText("Contador 1: " + resposta1);
         lbl2.setText("Contador 2: " + resposta2);
-        lbl2.setText("Contador 3: " + resposta3);
-        lbl3.setText("Contador 4: " + resposta4);
+        lbl3.setText("Contador 3: " + resposta3);
+        lbl4.setText("Contador 4: " + resposta4);
     }//GEN-LAST:event_btnReiniciarActionPerformed
+
+    private void btnReiniciar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReiniciar1ActionPerformed
+
+        try {
+            URI link = new URI("https://www.google.com/search?q=4+temperamentos+sangu%C3%ADneo++col%C3%A9rico+melanc%C3%B3lico+fleum%C3%A1tico&sxsrf=ALiCzsb4I57aHT0BmS7HOFLx3dUZN7KGyw%3A1659926949102&ei=pXnwYqP2Bee55OUP2OqGgAI&ved=0ahUKEwjj3J3hnbb5AhXnHLkGHVi1ASAQ4dUDCA4&uact=5&oq=4+temperamentos+sangu%C3%ADneo++col%C3%A9rico+melanc%C3%B3lico+fleum%C3%A1tico&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyCAgAEB4QBxAFMgYIABAeEAg6BwgAEEcQsANKBAhBGABKBAhGGABQnQlYnQlg5ApoAnABeACAAaMBiAGjAZIBAzAuMZgBAKABAcgBCMABAQ&sclient=gws-wiz");
+            Desktop.getDesktop().browse(link);
+        } catch (Exception erro) {
+            System.out.println(erro);
+        }    }//GEN-LAST:event_btnReiniciar1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -312,6 +414,7 @@ public class QuestionarioView extends javax.swing.JFrame {
                 if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
@@ -350,6 +453,7 @@ public class QuestionarioView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEnviarTeste;
     private javax.swing.JButton btnReiniciar;
+    private javax.swing.JButton btnReiniciar1;
     private javax.swing.JButton btnresposta1;
     private javax.swing.JButton btnresposta2;
     private javax.swing.JButton btnresposta3;
