@@ -78,15 +78,24 @@ public class QuestionarioView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Teste de Temperamentos");
         setMinimumSize(new java.awt.Dimension(640, 700));
+        getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Source Code Pro", 0, 36)); // NOI18N
         jLabel1.setText("Teste de Temperamentos");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(50, 10, 510, 46);
 
         jLabel2.setText("Escolha na lista as palavras que melhor o descrevem. ");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(60, 60, 390, 20);
 
         jLabel3.setText("Lendo as colunas horizontalmente, circule apenas uma palavra de cada linha.");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(60, 80, 480, 20);
 
         jLabel4.setText("Quando finalizar a lista, clique em \"Obter Resultado\".");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(60, 100, 490, 16);
 
         btnEnviarTeste.setFont(new java.awt.Font("Source Code Pro Semibold", 0, 36)); // NOI18N
         btnEnviarTeste.setText("Obter Resultado");
@@ -95,6 +104,10 @@ public class QuestionarioView extends javax.swing.JFrame {
                 btnEnviarTesteActionPerformed(evt);
             }
         });
+        getContentPane().add(btnEnviarTeste);
+        btnEnviarTeste.setBounds(50, 432, 510, 40);
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(146, 140, 0, 0);
 
         btnresposta1.setFont(new java.awt.Font("Source Code Pro", 0, 24)); // NOI18N
         btnresposta1.setText("1");
@@ -104,6 +117,8 @@ public class QuestionarioView extends javax.swing.JFrame {
                 btnresposta1ActionPerformed(evt);
             }
         });
+        getContentPane().add(btnresposta1);
+        btnresposta1.setBounds(50, 360, 125, 37);
 
         btnresposta2.setFont(new java.awt.Font("Source Code Pro", 0, 24)); // NOI18N
         btnresposta2.setText("2");
@@ -113,6 +128,8 @@ public class QuestionarioView extends javax.swing.JFrame {
                 btnresposta2ActionPerformed(evt);
             }
         });
+        getContentPane().add(btnresposta2);
+        btnresposta2.setBounds(180, 360, 123, 37);
 
         btnresposta3.setFont(new java.awt.Font("Source Code Pro", 0, 24)); // NOI18N
         btnresposta3.setText("3");
@@ -122,6 +139,8 @@ public class QuestionarioView extends javax.swing.JFrame {
                 btnresposta3ActionPerformed(evt);
             }
         });
+        getContentPane().add(btnresposta3);
+        btnresposta3.setBounds(310, 360, 113, 37);
 
         btnresposta4.setFont(new java.awt.Font("Source Code Pro", 0, 24)); // NOI18N
         btnresposta4.setText("4");
@@ -131,6 +150,8 @@ public class QuestionarioView extends javax.swing.JFrame {
                 btnresposta4ActionPerformed(evt);
             }
         });
+        getContentPane().add(btnresposta4);
+        btnresposta4.setBounds(430, 360, 130, 37);
 
         btnReiniciar.setFont(new java.awt.Font("Source Code Pro Semibold", 0, 24)); // NOI18N
         btnReiniciar.setText("Reiniciar");
@@ -139,6 +160,8 @@ public class QuestionarioView extends javax.swing.JFrame {
                 btnReiniciarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnReiniciar);
+        btnReiniciar.setBounds(50, 510, 230, 30);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -192,112 +215,35 @@ public class QuestionarioView extends javax.swing.JFrame {
         });
         jScrollPane5.setViewportView(jTable1);
 
+        getContentPane().add(jScrollPane5);
+        jScrollPane5.setBounds(50, 170, 510, 180);
+
         lbl1.setText("Contador 1:  0");
+        getContentPane().add(lbl1);
+        lbl1.setBounds(60, 400, 100, 16);
 
         lbl2.setText("Contador 2 : 0 ");
+        getContentPane().add(lbl2);
+        lbl2.setBounds(200, 400, 90, 16);
 
         lbl3.setText("Contador 3 : 0");
+        getContentPane().add(lbl3);
+        lbl3.setBounds(330, 400, 90, 16);
 
         lbl4.setText("Contador 4 :  0");
+        getContentPane().add(lbl4);
+        lbl4.setBounds(450, 400, 110, 20);
 
         btnReiniciar1.setFont(new java.awt.Font("Source Code Pro Semibold", 0, 14)); // NOI18N
-        btnReiniciar1.setText("Clique aqui e saiba mais sobre os temperamentos.");
+        btnReiniciar1.setText("Clique aqui e saiba mais sobre os temperamentos");
         btnReiniciar1.setFocusPainted(false);
         btnReiniciar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReiniciar1ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(btnresposta1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)
-                        .addComponent(btnresposta2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(7, 7, 7)
-                        .addComponent(btnresposta3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(7, 7, 7)
-                        .addComponent(btnresposta4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(lbl1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addComponent(lbl2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addComponent(lbl3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(lbl4, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(btnEnviarTeste, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(btnReiniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(96, 96, 96)
-                                    .addComponent(jLabel5))
-                                .addComponent(btnReiniciar1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(61, 61, 61))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(jLabel1)
-                .addGap(4, 4, 4)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jLabel4)
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel5))
-                    .addComponent(btnReiniciar1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnresposta1)
-                    .addComponent(btnresposta2)
-                    .addComponent(btnresposta3)
-                    .addComponent(btnresposta4))
-                .addGap(3, 3, 3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl1)
-                    .addComponent(lbl2)
-                    .addComponent(lbl3)
-                    .addComponent(lbl4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnEnviarTeste, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnReiniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        getContentPane().add(btnReiniciar1);
+        btnReiniciar1.setBounds(50, 130, 510, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
